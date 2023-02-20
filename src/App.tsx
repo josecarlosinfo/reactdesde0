@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Saludo from "./funciones/Saludo.js";
+import Casado from "./funciones/casado.js";
+import User from "./funciones/objetos.js";
+import Suma2Funciones from "./funciones/funcionEnFuncion.js";
+import { UserProps, UserProps2 } from "./funciones/propiedades";
+import { UserCard } from "./funciones/usarCard.js";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserCard
+        name="Carlos"
+        amount={3000}
+        married={true}
+        points={[99.2, 22.4]}
+        address={{
+          street: "Avenida me lo",
+          number: 1234,
+        }}
+      />
     </div>
   );
 }
